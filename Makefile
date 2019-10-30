@@ -6,7 +6,7 @@
 #    By: gmachado <gmachado@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/24 14:03:41 by gmachado          #+#    #+#              #
-#    Updated: 2019/10/28 13:54:01 by gmachado         ###   ########.fr        #
+#    Updated: 2019/10/30 13:21:40 by gmachado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,20 +42,19 @@ $(NAME):
 	make -C includes/libft
 	make -C includes/ft_printf
 	make -C includes/libui
-	# gcc $(CFLAGS) -o $(OBJS) -c $(SRCS)
-	gcc $(CFLAGS) `sdl2-config --libs --cflags` -o $(NAME) $(ARCHIVE) $(SRCS) $(INCLUDE)
+	@	gcc $(CFLAGS) `sdl2-config --libs --cflags` -o $(NAME) $(ARCHIVE) $(SRCS) $(INCLUDE)
 
 clean:
 	make -C ./includes/libft clean
 	make -C ./includes/ft_printf clean
 	make -C ./includes/libui clean
-	rm -f $(OBJS)
+	@	rm -f $(OBJS)
 
 fclean: clean
 	make -C ./includes/libft fclean
 	make -C ./includes/ft_printf fclean
 	make -C ./includes/libui fclean
-	rm -f $(NAME)
+	@	rm -f $(NAME)
 
 re: fclean all
 

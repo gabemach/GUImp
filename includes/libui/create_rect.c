@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   guimp.h                                            :+:      :+:    :+:   */
+/*   create_rect.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmachado <gmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/25 14:42:54 by gmachado          #+#    #+#             */
-/*   Updated: 2019/10/30 14:47:31 by gmachado         ###   ########.fr       */
+/*   Created: 2019/10/30 14:17:40 by gmachado          #+#    #+#             */
+/*   Updated: 2019/10/30 14:21:03 by gmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GUIMP_H
-# define GUIMP_H
+#include "libui.h"
 
-# include "libui/libui.h"
-# include "libft/libft.h"
-# include "ft_printf/ft_printf.h"
-
-typedef struct  s_sdl
+int init_rect(SDL_Rect *rect, int x, int y, int w, int h)
 {
-    SDL_Window      *win;
-    SDL_Renderer    *rend;
-    SDL_Palette     *palette;
-    SDL_Color       *clr;
-    const Uint8     *state;
-    SDL_Surface     *screen;
-    SDL_Surface     *img;
-}               t_sdl;
-
-#endif
+    rect->x = x;
+    rect->y = y;
+    rect->w = w;
+    rect->h = h;
+    return (0);
+}

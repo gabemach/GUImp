@@ -6,7 +6,7 @@
 /*   By: gmachado <gmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 12:23:04 by gmachado          #+#    #+#             */
-/*   Updated: 2019/10/29 15:02:54 by gmachado         ###   ########.fr       */
+/*   Updated: 2019/10/30 14:21:26 by gmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@
 
 void    *init_win(char *name, SDL_Window *win);
 void    *init_rend(SDL_Window *win, SDL_Renderer *rend);
-int     hold_win(int quit, SDL_Renderer *rend);
+int     init_rect(SDL_Rect *rect, int x, int y, int w, int h);
 
 #endif

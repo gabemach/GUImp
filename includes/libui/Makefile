@@ -6,7 +6,7 @@
 #    By: gmachado <gmachado@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/25 13:26:38 by gmachado          #+#    #+#              #
-#    Updated: 2019/10/28 13:52:41 by gmachado         ###   ########.fr        #
+#    Updated: 2019/10/30 13:19:44 by gmachado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,14 +33,14 @@ HEADER = \
 all: $(NAME)
 
 $(NAME): $(CFILES)
-	gcc $(CFLAGS) -I ../../Frameworks/SDL2.framework/Headers/SDL.h $(CFILES)
-	ar rc $(NAME) $(OFILES)
-	ranlib $(NAME)
+	@	gcc $(CFLAGS) -I ../../Frameworks/SDL2.framework/Headers/SDL.h $(CFILES)
+	@	ar rc $(NAME) $(OFILES)
+	@	ranlib $(NAME)
 
 clean:
-	rm -f $(OFILES)
+	@	rm -f $(OFILES)
 
 fclean: clean
-	rm -f $(NAME)
+	@	rm -f $(NAME)
 
 re: fclean all
