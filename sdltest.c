@@ -24,7 +24,7 @@ int main(void)
         SDL_Quit();
     }
     SDL_Renderer    *renderer = SDL_CreateRenderer(back_window, -1, SDL_RENDERER_PRESENTVSYNC | SDL_RENDERER_TARGETTEXTURE);
-    SDL_SetRenderDrawColor(renderer, 100, 100, 100, 255);
+    SDL_SetRenderDrawColor(renderer, 255, 100, 100, 255);
     SDL_RenderClear(renderer);
     quit = 0;
     while (quit == 0)

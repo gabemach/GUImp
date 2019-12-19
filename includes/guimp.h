@@ -6,7 +6,7 @@
 /*   By: gmachado <gmachado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/25 14:42:54 by gmachado          #+#    #+#             */
-/*   Updated: 2019/10/30 14:47:31 by gmachado         ###   ########.fr       */
+/*   Updated: 2019/12/12 13:05:55 by gmachado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,16 @@ typedef struct  s_sdl
     SDL_Window      *win;
     SDL_Renderer    *rend;
     SDL_Palette     *palette;
-    SDL_Color       *clr;
+    SDL_Color       *color;
     const Uint8     *state;
     SDL_Surface     *screen;
     SDL_Surface     *img;
+    SDL_Event       *events;
+    SDL_Rect        srcrect;
+    SDL_Rect        dstrect;
 }               t_sdl;
+
+# define HEIGHT 720
+# define WIDTH 1080
 
 #endif
